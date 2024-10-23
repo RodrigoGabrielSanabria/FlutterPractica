@@ -14,8 +14,10 @@ class Square {
 
    double _side; // side * side
 
+  // constructor con argumentos y aserciones
   Square ({required double side}) 
-  : _side =side; 
+  : assert(side >=0, 'side must be >0 '),
+   _side =side; 
 
   double get area{
     return _side * _side;
